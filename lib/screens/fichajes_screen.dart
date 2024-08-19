@@ -4,7 +4,7 @@ import 'package:rrhh_catoosa/api/api_service.dart';
 class FichajesScreen extends StatefulWidget {
   final String userId;
 
-  FichajesScreen({required this.userId});
+  const FichajesScreen({super.key, required this.userId});
 
   @override
   _FichajesScreenState createState() => _FichajesScreenState();
@@ -44,7 +44,7 @@ class _FichajesScreenState extends State<FichajesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fichajes'),
+        title: const Text('Fichajes'),
       ),
       body: ListView.builder(
         itemCount: _fichajes.length,
@@ -58,7 +58,7 @@ class _FichajesScreenState extends State<FichajesScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _registrarFichaje,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
